@@ -16,7 +16,7 @@
         return httpGet("https://quizmaker.pythonanywhere.com/api/get_title/"+quiz_id+"/"+question_number);
     };
     ext.get_answers = function(question_number,quiz_id,answer_var) {
-        var resp =  httpGet("https://quizmaker.pythonanywhere.com/api_get_answers/"+quiz_id+"/"+question_number);
+        var resp =  httpGet("https://quizmaker.pythonanywhere.com/api/get_answers/"+quiz_id+"/"+question_number);
         resp = resp.split("{;;}");
         answer_var = answer_var.concat(resp);
     }
