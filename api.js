@@ -17,8 +17,11 @@
     };
     ext.get_answers = function(question_number,quiz_id,answer_var) {
         var resp =  httpGet("https://quizmaker.pythonanywhere.com/api/get_answers/"+quiz_id+"/"+question_number);
-        resp = resp.split("{;;}");
-        answer_var = answer_var.concat(resp);
+        resp = resp.split("{{;;}}");
+        var output = ""
+        var cntr = 0
+        resp.forEach(function(entry){cntr = cntr + 1; output=output + "("+String(cntr)+") "+ entry + "\n"});
+        return output
     }
 
     // Block and block menu descriptions
@@ -26,7 +29,7 @@
         blocks: [
             // Block type, block name, function name
             ['r', 'Get Question Title No. %n of Quiz with id %n', 'get_question_title', 1, 0],
-            [" ", "Get All Answers from Question %n of Quiz %n in the list variable %n", "get_answers", 1,0 , ["hi"]]
+            ["r", "Get Answer Choice Text of question %n of quiz with id %n", "get_answers", 1, 0]
         ]
     };
 
