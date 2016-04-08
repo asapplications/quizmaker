@@ -25,7 +25,7 @@
         blocks: [
             // Block type, block name, function name
             ['r', 'Get Question Title No. %n of Quiz with id %n', 'get_question_title', 1, 0],
-            ["r", "Get All Answers from Question %n of Quiz %n in the list variable %n", 1,0 , ["hi"]]
+            ["r", "Get All Answers from Question %n of Quiz %n in the list variable %n", "get_answers", 1,0 , ["hi"]]
         ]
     };
 
