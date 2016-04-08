@@ -30,7 +30,8 @@
             // Block type, block name, function name
             ['r', 'Get Question Title No. %n of Quiz with id %n', 'get_question_title', 1, 0],
             ["r", "Get Answer Choice Text of question %n of quiz with id %n", "get_answers", 1, 0]
-        ]
+        ],
+        url: "http://asapplications.github.io/quizmaker/api_scratch_doc"
     };
 
     // Register the extension
